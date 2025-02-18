@@ -14,7 +14,6 @@ const Navbar = () => {
            <img src={assets.logo} alt="" className='w-28 sm:w-32 lg:w-40'/>
         </Link>
 
-
         <div>
             {user 
             ? 

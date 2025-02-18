@@ -14,7 +14,7 @@ const Header = () => {
         <p className='text-[16px] text-gray mt-4 w-[500px] text-center'>Unleash your creativity with AI. Turn your imagination into visual art in seconds – just type, and watch the magic happen.</p>
 
         <button className='flex items-center gap-2 sm:text-lg text-white bg-black w-auto mt-8 px-12 py-3 rounded-full'>Generate Images
-          <img className='h-7' src={assets.star_group} alt="" />
+          <img src={assets.star_group} alt="" className='h-7'/>
         </button>
 
         <div className='flex flex-wrap gap-3 justify-center mt-16'>
