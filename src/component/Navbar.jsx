@@ -19,7 +19,7 @@ const Navbar = () => {
             {user 
             ? 
              <div className='flex items-center gap-2 sm:gap-3'>
-              <button onClick={()=>nativgate('/buy')} className='flex items-center gap-2 bg-green px-4 py-1.5 sm:px-6 sm:py-3 rounded-full hover:scale-105 duration-700 translate-all cursor-pointer'>
+              <button onClick={()=>nativgate('/buy')} className='flex items-center gap-2 bg-gradient-to-r from-btn-gradiant1 to-btn-gradiant2 px-4 py-1.5 sm:px-6 sm:py-3 rounded-full hover:scale-105 duration-700 translate-all cursor-pointer'>
                 <img className='w-5' src={assets.credit_star} alt="" />
                 <p className='text-xs sm:text-sm font-regular text-gray-600'>Credits left : 4</p>
               </button>
