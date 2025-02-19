@@ -9,9 +9,9 @@ const Header = () => {
             <img src={assets.star_icon} alt="" />
         </div>
 
-        <h1 className='text-[80px] max-w-[300px] leading-[80px] sm:text-7xl sm:max-w-[590px] mx-auto mt-10 text-center'>Turn text to <span className='bg-gradient-to-r from-gradiant1 to-gradiant2 text-transparent bg-clip-text'>image</span>, in seconds.</h1>
+        <h1 className='text-6xl max-w-[300px] leading-[80px] sm:text-7xl sm:max-w-[590px] mx-auto mt-10 text-center'>Turn text to <span className='bg-gradient-to-r from-gradiant1 to-gradiant2 text-transparent bg-clip-text'>image</span>, in seconds.</h1>
 
-        <p className='text-[16px] text-gray mt-4 w-[500px] text-center'>Unleash your creativity with AI. Turn your imagination into visual art in seconds – just type, and watch the magic happen.</p>
+        <p className='text-[16px] text-gray mt-4 max-w-[500px] text-center'>Unleash your creativity with AI. Turn your imagination into visual art in seconds – just type, and watch the magic happen.</p>
 
         <button className='flex items-center gap-2 sm:text-lg text-white bg-black w-auto mt-8 px-12 py-3 rounded-full'>Generate Images
           <img src={assets.star_group} alt="" className='h-7'/>

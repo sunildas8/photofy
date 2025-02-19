@@ -4,7 +4,7 @@ import { assets, testimonialsData } from '../assets/assets'
 const Testimonials = () => {
   return (
     <div className='flex flex-col justify-center items-center my-20 py-12'>
-        <h1 className='text-[40px] sm:text-4xl text-primary font-semibold mb-2'>Customer testimonials</h1>
+        <h1 className='text-2xl sm:text-4xl text-primary font-semibold mb-2'>Customer testimonials</h1>
         <p className='text-4 text-gray3 mb-8'>What Our Users Are Saying</p>
 
         <div className='flex flex-wrap gap-6'>

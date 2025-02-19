@@ -6,6 +6,11 @@
     font-family: "Outfit", serif;
 }
 
+.placeholder-color{
+    color: #fff;
+    font-weight: 300;
+}
+
 @theme{
     --color-primary: #252525;
     --color-gray: #545454;
@@ -16,6 +21,7 @@
     --color-headline2: #62577B;
     --color-user: #4A4A4A;
     --color-green: #DEF5BA;
+    --color-bar: #B7FA3D;
     --color-gradiant1: #7ED957;
     --color-gradiant2: #0097B4;
     --color-btn-gradiant1: #E1FFBC;

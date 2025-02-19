@@ -4,7 +4,7 @@ import { assets } from '../assets/assets'
 const Description = () => {
   return (
     <div className='flex flex-col justify-center items-center my-24 p-6 md:px-28'>
-        <h1 className='text-[40px] sm:text-4xl text-primary font-semibold mb-2'>Create AI Images</h1>
+        <h1 className='text-3xl sm:text-4xl text-primary font-semibold mb-2'>Create AI Images</h1>
         <p className='text-4 text-gray3 mb-8'>Turn your imagination into visuals</p>
 
         <div className='flex flex-col gap-5 md:flex-row md:gap-14 items-center justify-center w-[79%]'>
