@@ -16,7 +16,7 @@ const Login = () => {
    },[])
 
   return (
-    <div className='absolute bg-black/30 backdrop-blur-sm top-0 bottom-0 left-0 right-0 flex justify-center items-center z-10'>
+    <div className='fixed bg-black/30 backdrop-blur-sm top-0 bottom-0 left-0 right-0 flex justify-center items-center z-10'>
         <form className='relative bg-white rounded-[15px] p-10 text-slate-500'>
 
            <img onClick={()=>setShowLogin(false)} src={assets.cross_icon} alt="" className='absolute top-5 right-5 cursor-pointer'/>
