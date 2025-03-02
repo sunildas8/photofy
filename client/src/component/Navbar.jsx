@@ -5,7 +5,7 @@ import { AppContext } from '../context/Appcontext'
 
 const Navbar = () => {
 
-  const { user, setShowLogin } = useContext(AppContext);
+  const { user, setShowLogin, logout, credit } = useContext(AppContext);
     const nativgate = useNavigate()
 
 
@@ -21,15 +21,14 @@ const Navbar = () => {
              <div className='flex items-center gap-2 sm:gap-3'>
               <button onClick={()=>nativgate('/buy')} className='flex items-center gap-2 bg-gradient-to-r from-btn-gradiant1 to-btn-gradiant2 px-4 py-1.5 sm:px-6 sm:py-3 rounded-full hover:scale-105 duration-700 translate-all cursor-pointer'>
                 <img className='w-5' src={assets.credit_star} alt="" />
-                <p className='text-xs sm:text-sm font-regular text-gray-600'>Credits left : 4</p>
+                <p className='text-xs sm:text-sm font-regular text-gray-600'>Credits left : {credit}</p>
               </button>
-              <p className='text-gray-600 max-sm:hidden pl-4'>Hi! Sunil</p>
+              <p className='text-gray-600 max-sm:hidden pl-4'>Hi! {user.name}</p>
               <div className='relative group'>
                 <img className='w-10 drop-shadow' src={assets.profile_icon} alt="" />
                 <div className='absolute hidden group-hover:block top-0 right-0 z-10 text-black rounded pt-12'>
                     <ul className='list-none m-0 p-0 bg-white text-sm rounded-lg shadow-md'>
-                      <li className='px-3 py-2 rounded-t-lg hover:bg-gray-200 duration-200 cursor-pointer pr-10'>Profile</li>
-                      <li className='px-3 py-2 rounded-b-lg hover:bg-gray-200 duration-200 cursor-pointer pr-10'>Logout</li>
+                      <li onClick={logout} className='px-3 py-2 rounded hover:bg-gray-200 duration-200 cursor-pointer pr-10'>Logout</li>
                     </ul>
                 </div>
               </div>
