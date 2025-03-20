@@ -1,14 +1,14 @@
-import mongoose from "mongoose";
+// import mongoose from "mongoose";
 
-const transactionSchema = new mongoose.Schema({
-    userId: {type: String, required: true},
-    plan: {type: String, required: true},
-    amount: {type: Number, required: true},
-    credits: {type: Number, required: true},
-    payment: {type: Boolean, default: false},
-    date: {type: Number},
-})
+// const transactionSchema = new mongoose.Schema({
+//     userId: {type: String, required: true},
+//     plan: {type: String, required: true},
+//     amount: {type: Number, required: true},
+//     credits: {type: Number, required: true},
+//     payment: {type: Boolean, default: false},
+//     date: {type: Number},
+// })
 
-const transactionMondel = mongoose.models.user || mongoose.model("transaction", transactionSchema)
+// const transactionMondel = mongoose.models.user || mongoose.model("transaction", transactionSchema)
 
-export default transactionMondel
+// export default transactionMondel

@@ -23,7 +23,7 @@ const registerUser = async (req,res)=>{
         const newUser = new userMondel(userData)
         const user = await newUser.save()
 
-        const token = jwt.sign({id: user._id}, process.env.JWT_TOKEN)
+        const token = jwt.sign({id: user._id}, process.env.JWT_TOKEN , { expiresIn: '1d' })
         res.json({success: true, token, user: {user: user.name}})
 
     } catch (error) {
@@ -43,7 +43,7 @@ const loginUser = async (req, res)=>{
         const isMatch = await bcrypt.compare(password, user.password)
 
         if (isMatch) {
-            const token = jwt.sign({id: user._id}, process.env.JWT_TOKEN)
+            const token = jwt.sign({id: user._id}, process.env.JWT_TOKEN, { expiresIn: '1d' })
             res.json({success: true, token, user: {user: user.name}})
         }else{
             return res.json({success:false, message: 'Invalid email or password'})
