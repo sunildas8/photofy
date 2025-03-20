@@ -2,10 +2,25 @@ import React, { useContext } from 'react'
 import { assets, plans } from '../assets/assets'
 import { AppContext } from '../context/Appcontext'
 import { motion } from "motion/react"
+// import axios from 'axios';
+
 
 const BuyCredit = () => {
 
-   const {user} = useContext(AppContext)
+  const {user} = useContext(AppContext)
+
+
+  // const handlePayment = async () => {
+  //   try {
+  //     const response  = await axios.post(`${import.meta.env.VITE_BACKEND_URL}/api/payment/pay`);
+  //     console.log(response.data.url);
+      
+  //     window.location.href = response.data.url; 
+  //   } catch (error) {
+  //     console.error("Payment Error:", error);
+  //     alert("Payment initiation failed!");
+  //   }
+  // };
 
   return (
     <motion.div className='min-h-[80vh] text-center mb-10 pt-14'
@@ -26,7 +41,10 @@ const BuyCredit = () => {
               <p className='mt-6 text-[14px]'>
                 <span className='text-[34px] font-medium'>${item.price} </span> / {item.credits} credits
               </p>
-              <button className='w-full bg-primary text-white rounded-md py-2.5 mt-8 min-w-52 cursor-pointer'>{user ? 'Purchase' : 'Get started'}</button>
+              <button className='w-full bg-primary text-white rounded-md py-2.5 mt-8 min-w-52 cursor-pointer'
+            >
+              {user ? 'Purchase' : 'Get Started'}
+            </button>
            </div>
          ))}
        </div>

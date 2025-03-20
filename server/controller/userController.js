@@ -1,6 +1,8 @@
 import userMondel from "../models/userModel.js";
 import bcrypt, {hash}   from 'bcrypt';
 import jwt from 'jsonwebtoken'
+// import Stripe from 'stripe';
+// import transactionMondel from "../models/transactionModel.js";
 
 const registerUser = async (req,res)=>{
     try {
@@ -64,5 +66,72 @@ const userCredits = async (req, res)=>{
         res.json({success: false, message: error.message})
     }
 }
+
+// const stripeInstance = new Stripe({
+//     publishable_key: process.env.PUBLISHABLE_KEY,
+//     secret_key: process.env.SECRET_KEY,
+// })
+
+// const paymentSripe = async (req, res)=>{
+//     try {
+//         const {userID, planId} = req.body
+//         const userData = await userMondel.findById(userID)
+
+//         if (!userID || !planId) {
+//             return res.json({success: false, message: 'Missing Details'})
+//         }
+
+//         let credits, plan, amount, date
+
+//         switch (planId) {
+//             case 'Basic':
+//                 plan = 'Basic'
+//                 credits = 100
+//                 amount = 500
+//                 break;
+                
+//             case 'Advanced':
+//                 plan = 'Advanced'
+//                 credits = 500
+//                 amount = 1500
+//                 break;
+
+//             case 'Business':
+//                 plan = 'Business'
+//                 credits = 1000
+//                 amount = 3000
+//                 break;
+        
+//             default:
+//                 return res.json({success: false, message: 'Plan not found'})
+//         }
+
+//         date = Date.now()
+
+//         const transactionData = {
+//             userID, credits, plan, amount, date
+//         }
+
+//         const newTransaction = await transactionMondel.create(transactionData)
+
+//         const options = {
+//             amount: amount * 100,
+//             currency: process.env.CURRENCY,
+//             receipt: newTransaction._id,
+//         }
+
+//         await stripeInstance.orders.create(options, (error, order)=>{
+//             if (error) {
+//                 console.log(error);
+//                 return res.json({success: false, message: error.message})
+//             }
+//             res.json({success: true, order})
+//         })
+
+//     } catch (error) {
+//         console.log(error);
+//         res.json({success: false, message: error.message})
+//     }
+// }
 
 export {registerUser, loginUser, userCredits}
